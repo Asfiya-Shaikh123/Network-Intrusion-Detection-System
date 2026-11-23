@@ -1,0 +1,16 @@
+# Virtual environments
+venv*/
+nids_env/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Checkpoints
+.ipynb_checkpoints/
+
+# Local batch files
+*.bat
