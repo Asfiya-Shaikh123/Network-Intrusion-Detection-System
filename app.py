@@ -237,6 +237,59 @@ st.markdown("""
         overflow: hidden;
         border: 1px solid rgba(148,163,184,0.10);
     }
+
+    /* =====================================================
+       FIX: Alert boxes (st.success, st.error, st.info)
+       ===================================================== */
+    div[data-testid="stAlert"] {
+        background-color: #0f172a !important;
+        border-radius: 14px !important;
+        border: 1px solid rgba(148, 163, 184, 0.25) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    div[data-testid="stAlert"] p,
+    div[data-testid="stAlert"] span,
+    div[data-testid="stAlert"] div {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+    }
+
+    div[data-testid="stAlert"] a {
+        color: #60a5fa !important;
+        text-decoration: underline !important;
+    }
+
+    /* Success box styling */
+    div[data-testid="stAlert"]:has([data-testid="stNotificationContentSuccess"]) {
+        background-color: rgba(22, 101, 52, 0.35) !important;
+        border: 1px solid rgba(34, 197, 94, 0.5) !important;
+    }
+
+    /* Error box styling */
+    div[data-testid="stAlert"]:has([data-testid="stNotificationContentError"]) {
+        background-color: rgba(153, 27, 27, 0.35) !important;
+        border: 1px solid rgba(239, 68, 68, 0.5) !important;
+    }
+
+    /* =====================================================
+       FIX: st.json and code display blocks
+       ===================================================== */
+    div[data-testid="stJson"],
+    div[data-testid="stJson"] pre,
+    div[data-testid="stJson"] div {
+        background-color: #0f172a !important;
+        border-radius: 12px !important;
+    }
+
+    div[data-testid="stJson"] {
+        border: 1px solid rgba(148, 163, 184, 0.18) !important;
+        padding: 0.75rem 1rem !important;
+    }
+
+    div[data-testid="stJson"] span {
+        font-family: "Consolas", "Courier New", monospace !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
